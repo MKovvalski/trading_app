@@ -64,26 +64,31 @@ class SearchBar extends Component {
 
     return (
       <div className='search-bar'>
-        <div className='search-bar__search-wrapper'>
-          <ControlledInput
-            className='search-bar__input'
-            value={inputValue}
-            onChange={this.manageInputValueChange}
-          />
-          {displayDropdown &&
-          <div className='search-bar__dropdown'>
-            <SearchDropdown
-              searches={searchResults}
-              onClick={company => this.setCompanyToTrack(company)}
-            />
-          </div>
-          }
+        <div className='search-bar__top-row'>
+          Type in Symbol of company You would like to track
         </div>
-        <div
-          className={bemCx('search-bar__track-button', { 'active': companyToTrack })}
-          onClick={() => updateCompanies(companyToTrack)}
-        >
-          Track
+        <div className='search-bar__bottom-row'>
+          <div className='search-bar__search-wrapper'>
+            <ControlledInput
+              className='search-bar__input'
+              value={inputValue}
+              onChange={this.manageInputValueChange}
+            />
+            {displayDropdown &&
+            <div className='search-bar__dropdown'>
+              <SearchDropdown
+                searches={searchResults}
+                onClick={company => this.setCompanyToTrack(company)}
+              />
+            </div>
+            }
+          </div>
+          <div
+            className={bemCx('search-bar__track-button', { 'active': companyToTrack })}
+            onClick={() => updateCompanies(companyToTrack)}
+          >
+            Track
+          </div>
         </div>
       </div>
     )

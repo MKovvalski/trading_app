@@ -1,0 +1,41 @@
+.company-tile-wrapper
+  border: 1px solid $color-dark-blue
+  border-radius: 4px
+  box-shadow: 0 5px 10px 0 $company-box-shadow-color-grey
+  margin-bottom: 15px
+
+  .company-tile
+    min-width: 343px
+    padding: 10px
+    color: $color-grey
+
+    &__row
+      display: flex
+      align-items: flex-end
+      padding-bottom: 8px
+
+      &:last-child
+        padding-bottom: 0
+
+    &__name
+      font-weight: 500
+      font-size: 18px
+      margin-right: 10px
+      color: $color-black
+
+    &__region
+      margin-right: 10px
+
+    &__hours
+      margin-right: 10px
+
+  &--loading,
+  &--overload
+    width: 343px
+    height: 67px
+    display: flex
+    align-items: center
+    justify-content: center
+
+  &__try-again
+    cursor: pointer

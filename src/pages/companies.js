@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import SearchBar from '../components/SearchBar'
+import CompanyTilesList from '../components/CompanyTilesList'
 
 class CompaniesPage extends Component {
   state = { companies: [] }
@@ -22,10 +23,15 @@ class CompaniesPage extends Component {
   }
 
   render () {
+    const { companies } = this.state
     return (
       <div className='companies-page'>
         <SearchBar
           updateCompanies={this.updateCompanies}
+        />
+        <CompanyTilesList
+          companies={companies}
+          removeCompany={this.removeCompany}
         />
       </div>
     )
