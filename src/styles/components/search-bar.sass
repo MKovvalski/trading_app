@@ -1,0 +1,39 @@
+.search-bar
+  display: flex
+  align-items: center
+  padding: 10px
+
+  &__search-wrapper
+    position: relative
+    margin-right: 10px
+
+  &__input
+    width: 280px
+    height: 28px
+    font-size: 18px
+    border-radius: 4px
+    padding-left: 5px
+    padding-right: 5px
+    border: 1px solid $color-dark-blue
+    transition: border .3s
+    text-overflow: ellipsis
+
+    &:focus
+      outline: none
+      border: 1px solid $color-green
+
+  &__dropdown
+    width: 100%
+    position: absolute
+    margin-top: 5px
+
+  &__track-button
+    font-size: 16px
+    opacity: 0.5
+    padding: 5px 8px
+    border-radius: 4px
+    background-color: $color-green
+
+    &--active
+      opacity: unset
+      cursor: pointer

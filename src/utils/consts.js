@@ -1,0 +1,1 @@
+export const VANTAGE_API_KEY = '0K47T6MOQ5W9HL6O'
