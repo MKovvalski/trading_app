@@ -65,7 +65,7 @@ class SearchBar extends Component {
     return (
       <div className='search-bar'>
         <div className='search-bar__top-row'>
-          Type in Symbol of company You would like to track
+          Type in Symbol of a company You would like to track
         </div>
         <div className='search-bar__bottom-row'>
           <div className='search-bar__search-wrapper'>

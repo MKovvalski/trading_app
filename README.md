@@ -4,65 +4,46 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+## npm install
+
+Installs all packages necessary to run the app
+
 ### `npm start`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Main assumptions of the project
 
-### `npm test`
+- provide way for user to search companies he wishes to track
+- display list of companies user decided to track
+- persist list of companies between page refreshes
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## What was done so far
 
-### `npm run build`
+- user can search companies and add them to the list
+- user can see a list of companies he/she decided to track
+- user can reload company tiles that didnt manage to load
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## In the next steps I would like to implement
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+displaying more information in the company tile
+    - daily trend
+    - current stock value
+    - image of the company
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- persisting company data between page refreshes
+    - logic of persist:
+        - after first company is chosen by user, cookie is created
+        - cookie contains array with company symbols as strings
+        - on refresh, companies page checks for cookie with companies
+        - if cookie is found, initial state of companies is populated with it
+        - company list component maps through said state and create separate requests for each company to gather more info to display
+        - each time user chooses new company to track, cookie is overwritten with new value in array
 
-### `npm run eject`
+## Limitation:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- One of the biggest constrains was the time. It is challenging to create a small app within span of 4 - 5 hours, thus I have built the most important things first.
+- provided APIs limits amount of possible requests one can make a day, which limits amount of real time test developer can make
+- additionally, there is no endpoint that would provide specific information set about one company, which means that, in order to get company info, one has to request using search, which is not very economic
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
