@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-## npm install
+## `npm install`
 
 Installs all packages necessary to run the app
 
@@ -27,7 +27,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## In the next steps I would like to implement
 
-displaying more information in the company tile
+- displaying more information in the company tile
     - daily trend
     - current stock value
     - image of the company
@@ -41,7 +41,7 @@ displaying more information in the company tile
         - company list component maps through said state and create separate requests for each company to gather more info to display
         - each time user chooses new company to track, cookie is overwritten with new value in array
 
-## Limitation:
+## Limitations
 
 - One of the biggest constrains was the time. It is challenging to create a small app within span of 4 - 5 hours, thus I have built the most important things first.
 - provided APIs limits amount of possible requests one can make a day, which limits amount of real time test developer can make
